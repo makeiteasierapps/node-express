@@ -40,8 +40,7 @@ partnerRouter
         );
     })
     .put((req, res) => {
-        res.statusCode = 403;
-        res.end('PUT operation not supported on /campsites');
+        res.end(`Updating partner ${req.params.partnerId} with name: ${req.body.name} and description: ${req.body.description}`);
     })
     .delete((req, res) => {
         res.end(`Deleting partner ${req.params.partnerId}`);
